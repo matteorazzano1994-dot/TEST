@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name]'s Home Page</title>
+  <style>
+    /* ——— COLORFUL WEB 1.0 VIBES ——— */
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, #ffefba, #ffffff 40%),
+                  repeating-linear-gradient(45deg, #ffe, #ffe 10px, #fdf 10px, #fdf 20px, #eff 20px, #eff 30px);
+      background-attachment: fixed;
+      color: #111;
+    }
+
+    /* Page frame (classic centered 760-ish layout) */
+    .page {
+      max-width: 860px;
+      margin: 24px auto;
+      background: #fff;
+      border: 6px ridge #ff66cc;
+      box-shadow: 0 8px 30px rgba(0,0,0,.2);
+    }
+
+    /* Header with marquee */
+    .header {
+      background: linear-gradient(90deg, #ff66cc, #66ccff, #66ff99);
+      border-bottom: 6px ridge #66ccff;
+      color: #000;
+      text-align: center;
+      padding: 0;
+    }
+    .header h1 {
+      margin: 10px 0 0;
+      font-size: 40px;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 0 rgba(255,255,255,.7);
+    }
+    marquee {
+      padding: 6px 0;
+      font-weight: bold;
+    }
+
+    /* Retro nav buttons */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      padding: 12px;
+      background: linear-gradient(180deg, #fff, #f6f6f6);
+      border-bottom: 6px groove #66ff99;
+    }
+    .nav a {
+      display: inline-block;
+      padding: 8px 14px;
+      text-decoration: none;
+      color: #000;
+      border: 3px outset #aaa;
+      background: linear-gradient(180deg, #ffffcc, #ffddff);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,.8);
+    }
+    .nav a:hover { border-style: inset; }
+
+    /* Content in an old-school table */
+    table.layout {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table.layout td {
+      vertical-align: top;
+      padding: 16px;
+    }
+    .sidebar {
+      width: 260px;
+      background: #f9f9ff;
+      border-right: 4px dotted #ff66cc;
+    }
+
+    .card {
+      border: 4px groove #66ccff;
+      background: #fff;
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      margin: 0 0 8px 0;
+      font-size: 20px;
+    }
+
+    /* Fun horizontal rule */
+    .rainbow-hr {
+      height: 8px;
+      border: none;
+      background: linear-gradient(90deg, #ff66cc, #ffcc66, #66ff99, #66ccff, #cc99ff, #ff66cc);
+      margin: 16px 0;
+    }
+
+    /* Link list */
+    .link-list {
+      list-style: square inside;
+      margin: 0; padding: 0 0 0 8px;
+    }
+    .link-list li { margin: 8px 0; }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 10px 8px 18px;
+      background: linear-gradient(180deg, #f6f6f6, #fff);
+      border-top: 6px ridge #ffcc66;
+      font-size: 14px;
+    }
+
+    /* Badges */
+    .badges {
+      display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 10px;
+    }
+    .badge {
+      font-family: "Courier New", monospace;
+      font-size: 12px;
+      border: 2px solid #000;
+      padding: 2px 6px;
+      background: repeating-linear-gradient(45deg, #fff, #fff 6px, #ddd 6px, #ddd 12px);
+    }
+
+    /* Placeholder image squares (no external assets) */
+    .thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .thumb {
+      height: 80px;
+      border: 4px inset #aaa;
+      background: linear-gradient(135deg, #ffe, #def);
+      display: grid; place-items: center;
+      font-size: 12px; font-family: "Courier New", monospace;
+    }
+
+    /* Contact info list */
+    .info dt { font-weight: bold; }
+    .info dd { margin: 0 0 8px 0; }
+
+    /* Mobile tweaks */
+    @media (max-width: 760px) {
+      .sidebar { width: auto; border-right: none; border-bottom: 4px dotted #ff66cc; }
+      table.layout, table.layout tr, table.layout td { display: block; width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="header">
+      <h1>Welcome to <span style="text-decoration: underline;">[Your Name]</span>'s Home Page!</h1>
+      <marquee behavior="scroll" direction="left" scrollamount="7">🚀 Under Construction • 💾 Best viewed on a desktop • 🌈 Enjoy the colors!</marquee>
+    </div>
+
+    <nav class="nav">
+      <a href="#about">About Me</a>
+      <a href="#links">Cool Links</a>
+      <a href="#gallery">Photo Album</a>
+      <a href="#guestbook">Guestbook</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <table class="layout">
+      <tr>
+        <!-- SIDEBAR -->
+        <td class="sidebar">
+          <div class="card" id="about">
+            <h3>About Me</h3>
+            <hr class="rainbow-hr" />
+            <dl class="info">
+              <dt>Name</dt>
+              <dd>[Your Name]</dd>
+              <dt>Address</dt>
+              <dd>[Street Address], [City], [State/Region], [Postal Code]</dd>
+              <dt>Email</dt>
+              <dd><a href="mailto:[your@email.com]">[your@email.com]</a></dd>
+              <dt>Phone</dt>
+              <dd>[+00 000 000 0000]</dd>
+              <dt>Tagline</dt>
+              <dd>"[A short line about you goes here!]"</dd>
+            </dl>
+          </div>
+
+          <div class="card" id="guestbook">
+            <h3>Sign My Guestbook ✍️</h3>
+            <hr class="rainbow-hr" />
+            <p>
+              Drop me a line! Click the magic button below to send a friendly message.
+            </p>
+            <p style="text-align:center">
+              <a class="badge" href="mailto:[your@email.com]?subject=Hello%20from%20your%20website">Sign Guestbook by Email</a>
+            </p>
+            <p style="font-size:12px; text-align:center;">
+              Psst… you can replace this with any real guestbook service.
+            </p>
+          </div>
+        </td>
+
+        <!-- MAIN CONTENT -->
+        <td>
+          <div class="card" id="links">
+            <h3>Cool Links 🔗</h3>
+            <hr class="rainbow-hr" />
+            <ul class="link-list">
+              <li><a href="https://example.com" target="_blank" rel="noopener">Example Domain</a> — a simple placeholder website.</li>
+              <li><a href="https://www.wikipedia.org" target="_blank" rel="noopener">Wikipedia</a> — free encyclopedia of everything.</li>
+              <li><a href="https://neocities.org" target="_blank" rel="noopener">Neocities</a> — host your own retro site.</li>
+              <li><a href="https://www.archive.org" target="_blank" rel="noopener">Internet Archive</a> — wayback machine & more.</li>
+              <li><a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank" rel="noopener">The First Website</a> — the web’s origins.</li>
+              <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a> — quick HTML & CSS refs.</li>
+              <li><a href="https://www.spacejam.com/1996/" target="_blank" rel="noopener">Space Jam (1996) site</a> — legendary web 1.0 design.</li>
+            </ul>
+          </div>
+
+          <div class="card" id="gallery">
+            <h3>Photo Album 📷</h3>
+            <hr class="rainbow-hr" />
+            <div class="thumbs">
+              <div class="thumb">[pic 1]</div>
+              <div class="thumb">[pic 2]</div>
+              <div class="thumb">[pic 3]</div>
+              <div class="thumb">[pic 4]</div>
+              <div class="thumb">[pic 5]</div>
+              <div class="thumb">[pic 6]</div>
+            </div>
+            <p style="font-size:12px; margin-top:8px;">Replace these with your images or keep the placeholders for the vibe.</p>
+          </div>
+
+          <div class="card" id="contact">
+            <h3>Contact Me 📬</h3>
+            <hr class="rainbow-hr" />
+            <p>
+              📧 Email: <a href="mailto:[your@email.com]">[your@email.com]</a><br />
+              📞 Phone: [+00 000 000 0000]<br />
+              📍 Address: [Street Address], [City], [State/Region], [Postal Code]
+            </p>
+            <p>
+              Or leave a note in the <a href="#guestbook">guestbook</a> above.
+            </p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <div class="footer">
+      <div class="badges">
+        <span class="badge">Best viewed in 800x600</span>
+        <span class="badge">Made with ♥ and HTML</span>
+        <span class="badge">No cookies. Only vibes.</span>
+      </div>
+      <p style="margin: 10px 0 0;">Visitor Counter: <strong>[000123]</strong></p>
+      <p style="margin: 4px 0 0;">© <span id="year"></span> [Your Name]. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    // Tiny enhancement to keep the year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
